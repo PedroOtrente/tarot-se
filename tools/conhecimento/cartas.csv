@@ -1,0 +1,23 @@
+numero;nome;codigo_regra;aprofundada;categoria;fato;categoria_se_falso;nuance;descricao_geral
+0;O Louco;R07;sim;NEUTRO;;;;Arquétipo do início absoluto: potencial puro ainda não testado pela realidade. Representa fé no desconhecido, coragem e espontaneidade — mas também a sombra da imprudência se agir sem nenhum discernimento.
+1;O Mago;R08;sim;FAVORAVEL;;;quando combinado com ação real;Manifestação e poder pessoal: ter as ferramentas necessárias (os 4 naipes na mesa) e usar a vontade e o foco para transformar potencial em realidade concreta.
+2;A Sacerdotisa;R09;sim;NEUTRO;;;;Intuição, mistério e conhecimento interior ainda não revelado. Representa o inconsciente, a espera consciente e a confiança na percepção interna, mesmo sem prova lógica.
+3;A Imperatriz;;nao;FAVORAVEL;;;;Abundância, fertilidade, criatividade e cuidado — crescimento natural de algo que está sendo bem nutrido.
+4;O Imperador;;nao;NEUTRO;;;;Estrutura, autoridade e ordem — liderança prática e construção de bases sólidas.
+5;O Hierofante;;nao;NEUTRO;;;;Tradição, aprendizado formal e orientação por regras ou instituições estabelecidas.
+6;Os Enamorados;R10;sim;NEUTRO;;;;Duas camadas que coexistem: união/conexão genuína (alinhamento real de valores) e escolha significativa — decisão consciente entre dois caminhos, que diz algo sobre quem a pessoa é.
+7;O Carro;;nao;FAVORAVEL;;;;Vontade direcionada, vitória por foco e disciplina — avançar apesar de forças opostas.
+8;A Força;R11;sim;FAVORAVEL;;;conquistado com esforço interno consciente;Coragem genuína exercida com compaixão e autocontrole, não com força bruta — domar o instinto com paciência interior, poder que vem da serenidade.
+9;O Eremita;;nao;NEUTRO;;;;Introspecção e busca interior — necessidade de se retirar para refletir antes de agir.
+10;A Roda da Fortuna;R12;sim;CAUTELA;;;;O ciclo inevitável da vida — sorte, destino e mudança fora do controle direto da pessoa. O que sobe, desce; o que desce, sobe. Convida a soltar a ilusão de controle total.
+11;A Justiça;R13;sim;FAVORAVEL;HISTORICO_SOLIDO;MUDANCA;;Equilíbrio, verdade e causa-efeito: decisões justas baseadas em fatos, não em emoção. O que foi plantado será colhido, com clareza.
+12;O Enforcado;;nao;CAUTELA;;;;Pausa forçada, ver a situação de outro ângulo, rendição necessária antes de agir.
+13;A Morte;R14;sim;MUDANCA;;;transição já madura;Não é morte física — é transformação profunda e encerramento simbólico de um ciclo que já cumpriu sua função, abrindo espaço obrigatório para o novo.
+14;A Temperança;R15;sim;FAVORAVEL;;;de forma gradual;Equilíbrio, moderação e integração de opostos (como as duas taças misturando líquidos). Cura gradual, ajuste fino, a arte do meio-termo certo, sem excessos.
+15;O Diabo;R16;sim;MUDANCA;;;de origem interna;Aprisionamento autoimposto — vício, apego, dependência ou padrão tóxico que a pessoa poderia largar, mas ainda não se permite (as correntes, na carta clássica, são frouxas).
+16;A Torre;R17;sim;MUDANCA;;;;A ruptura inevitável — colapso súbito de uma estrutura já comprometida por dentro. Não cria a crise: revela uma que já existia, de forma abrupta e fora do controle da pessoa.
+17;A Estrela;R18;sim;FAVORAVEL;;;de forma suave, sem euforia;Esperança, cura e renovação depois de uma crise — a serenidade que sucede o colapso da Torre. Fé no futuro e reconexão consigo mesmo, sem a euforia do Sol.
+18;A Lua;;nao;CAUTELA;;;;Ilusão, confusão e medos inconscientes — intuição turva, cuidado para não se guiar por aparências.
+19;O Sol;R19;sim;FAVORAVEL;;;;Vitalidade, sucesso, clareza e alegria genuína — a carta mais próxima de um "sim" direto do baralho. Verdade exposta à luz, reconhecimento e vitória sem ambiguidade.
+20;O Julgamento;;nao;MUDANCA;;;;Despertar, chamado para uma nova fase, avaliação final de um ciclo que se encerra.
+21;O Mundo;R20;sim;FAVORAVEL;;;;Conclusão e realização plena — um ciclo inteiro completado com sucesso. É a última carta da jornada do Louco: integração total, sensação de "chegar lá".

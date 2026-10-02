@@ -1,0 +1,127 @@
+carta;ambito;posicao;texto
+O Louco;Relacionamentos;Significador;Pessoa sem muita experiência afetiva; contexto pede iniciar a jornada para ganhar vivência.
+O Louco;Profissional;Significador;Pessoa sem muita experiência no cargo/mercado; está construindo a bagagem, não usando uma já existente.
+O Louco;Acadêmico;Significador;Estudante iniciante numa área/matéria nova, ainda sem método consolidado.
+O Louco;Relacionamentos;Movimento;É preciso se expor emocionalmente sem garantias para a relação avançar.
+O Louco;Profissional;Movimento;Pede decisão de arriscar (aceitar proposta, trocar de emprego) mesmo sem certeza do resultado.
+O Louco;Acadêmico;Movimento;Pede mudar de abordagem de estudo ou tentar algo novo mesmo sem garantia de sucesso.
+O Louco;Relacionamentos;Resultado;Não é carta natural de Resultado; se aparecer, indica começo inesperado e rota sem garantias.
+O Louco;Profissional;Resultado;Novo começo que só se revela depois da decisão tomada.
+O Louco;Acadêmico;Resultado;Necessidade de dar o salto rumo ao desconhecido.
+O Mago;Relacionamentos;Significador;Pessoa com clareza sobre o que quer e capacidade de agir para conquistar/construir isso.
+O Mago;Profissional;Significador;Pessoa com as habilidades e recursos necessários em mãos, na posição de tomar iniciativa.
+O Mago;Acadêmico;Significador;Estudante com domínio das ferramentas necessárias (método, recursos); só falta aplicar.
+O Mago;Relacionamentos;Movimento;Uma ação decisiva e focada está sendo tomada na relação.
+O Mago;Profissional;Movimento;Momento de transformar intenção em ação concreta no trabalho.
+O Mago;Acadêmico;Movimento;Momento de aplicar o método/recurso que já se domina.
+O Mago;Relacionamentos;Resultado;Manifestação bem-sucedida daquilo que foi intencionado na relação.
+O Mago;Profissional;Resultado;A vontade se concretiza em resultado profissional visível.
+O Mago;Acadêmico;Resultado;Domínio do conteúdo se confirma no resultado.
+A Sacerdotisa;Relacionamentos;Significador;Pessoa guiada pela intuição, possivelmente guardando sentimentos ainda não verbalizados.
+A Sacerdotisa;Profissional;Significador;Pessoa com percepção estratégica que ainda não expôs abertamente; boa fase para observar antes de agir.
+A Sacerdotisa;Acadêmico;Significador;Estudante com compreensão intuitiva de um assunto, mesmo sem conseguir formalizar esse conhecimento ainda.
+A Sacerdotisa;Relacionamentos;Movimento;Momento pede escuta interna e paciência, não ação impulsiva.
+A Sacerdotisa;Profissional;Movimento;Pede observação estratégica antes de qualquer movimento público.
+A Sacerdotisa;Acadêmico;Movimento;Pede deixar a compreensão amadurecer antes de tentar explicá-la/prová-la.
+A Sacerdotisa;Relacionamentos;Resultado;A verdade afetiva se revela com o tempo, não por força.
+A Sacerdotisa;Profissional;Resultado;A resposta profissional certa depende de confiar no processo interno.
+A Sacerdotisa;Acadêmico;Resultado;O entendimento se consolida com paciência, não com pressa.
+Os Enamorados;Relacionamentos;Significador;Pessoa diante de uma decisão afetiva importante, ou vivendo conexão de valores genuína com alguém.
+Os Enamorados;Profissional;Significador;Pessoa diante de uma escolha de carreira relevante, que reflete valores, não só conveniência.
+Os Enamorados;Acadêmico;Significador;Estudante decidindo entre dois caminhos de formação que precisam refletir o que realmente importa.
+Os Enamorados;Relacionamentos;Movimento;Uma decisão afetiva está amadurecendo e não dá para adiar para sempre.
+Os Enamorados;Profissional;Movimento;Uma escolha de carreira está se aproximando, exigindo posicionamento.
+Os Enamorados;Acadêmico;Movimento;Uma decisão sobre rumo de estudos está se formando.
+Os Enamorados;Relacionamentos;Resultado;Escolha consciente que consolida (ou encerra) o vínculo com clareza.
+Os Enamorados;Profissional;Resultado;Decisão de carreira bem alinhada aos valores, mesmo que difícil.
+Os Enamorados;Acadêmico;Resultado;Definição clara de um caminho de formação que faz sentido.
+A Força;Relacionamentos;Significador;Pessoa lidando com desafio afetivo com paciência e compaixão, não confronto impulsivo.
+A Força;Profissional;Significador;Pessoa enfrentando desafio de trabalho com resiliência e controle emocional.
+A Força;Acadêmico;Significador;Estudante superando dificuldade com disciplina e paciência, não com virada de última hora.
+A Força;Relacionamentos;Movimento;A situação pede domar um impulso (raiva, medo) com calma, não reagir no automático.
+A Força;Profissional;Movimento;Pede resiliência frente a um obstáculo de trabalho.
+A Força;Acadêmico;Movimento;Pede constância e disciplina em vez de esforço explosivo e pontual.
+A Força;Relacionamentos;Resultado;Superação de um desafio afetivo pela via da paciência.
+A Força;Profissional;Resultado;Vitória profissional que vem de dentro, do autocontrole.
+A Força;Acadêmico;Resultado;Domínio da matéria conquistado por disciplina consistente.
+A Roda da Fortuna;Relacionamentos;Significador;Pessoa numa fase afetiva marcada por reviravoltas externas.
+A Roda da Fortuna;Profissional;Significador;Pessoa numa fase de carreira sujeita a fatores fora do seu controle (mercado, timing, decisões de terceiros).
+A Roda da Fortuna;Acadêmico;Significador;Estudante numa fase de altos e baixos que dependem também de fatores externos (sorte, timing).
+A Roda da Fortuna;Relacionamentos;Movimento;Mudança de ciclo em curso, movida por fatores externos.
+A Roda da Fortuna;Profissional;Movimento;Virada de carreira em curso, fora do controle direto.
+A Roda da Fortuna;Acadêmico;Movimento;Virada de fase de estudos em curso, por fatores externos.
+A Roda da Fortuna;Relacionamentos;Resultado;Desfecho depende de fatores fora do controle total — pode ser bom, mas é incerto até se concretizar.
+A Roda da Fortuna;Profissional;Resultado;Desfecho profissional depende de fatores fora do controle total — recomenda-se estar preparado para os dois lados.
+A Roda da Fortuna;Acadêmico;Resultado;Desfecho acadêmico depende de fatores fora do controle total — pode ser bom, mas é incerto até se concretizar.
+A Justiça;Relacionamentos;Significador;Situação que exige honestidade e equilíbrio nas decisões afetivas.
+A Justiça;Profissional;Significador;Pessoa diante de uma avaliação justa (mérito, contrato, decisão formal) baseada em fatos.
+A Justiça;Acadêmico;Significador;Estudante diante de uma avaliação que vai refletir exatamente o esforço/preparo real.
+A Justiça;Relacionamentos;Movimento;Uma decisão afetiva está sendo processada com base em fatos reais.
+A Justiça;Profissional;Movimento;Uma avaliação/processo está em curso e tende a ser justo, desde que a pessoa também seja honesta.
+A Justiça;Acadêmico;Movimento;Um processo avaliativo em curso, proporcional ao esforço já investido.
+A Justiça;Relacionamentos;Resultado;Resultado proporcional ao mérito/esforço real na relação.
+A Justiça;Profissional;Resultado;Resultado profissional proporcional ao mérito — sem distorções.
+A Justiça;Acadêmico;Resultado;Nota/resultado que reflete exatamente o preparo real.
+A Morte;Relacionamentos;Significador;Fim de uma fase afetiva (não necessariamente da relação em si, mas de uma forma antiga de se relacionar).
+A Morte;Profissional;Significador;Fase de carreira que já se esgotou — o cargo ou modo de trabalhar não cabe mais em quem a pessoa se tornou.
+A Morte;Acadêmico;Significador;Fase de estudos/abordagem que não serve mais; é preciso deixar um método ou área para evoluir.
+A Morte;Relacionamentos;Movimento;Um encerramento está em curso — uma forma antiga do vínculo está morrendo para uma nova nascer.
+A Morte;Profissional;Movimento;Uma transição de carreira ou função está se processando.
+A Morte;Acadêmico;Movimento;Uma virada de chave em curso: o jeito antigo de estudar está sendo substituído.
+A Morte;Relacionamentos;Resultado;Transformação definitiva — fim real da relação ou de uma versão antiga dela, sem volta ao que era.
+A Morte;Profissional;Resultado;Fechamento de um ciclo profissional como ponto de virada necessário.
+A Morte;Acadêmico;Resultado;Encerramento de uma fase de formação — o antes e o depois ficam claramente separados.
+A Temperança;Relacionamentos;Significador;Pessoa buscando (ou precisando buscar) equilíbrio e paciência no relacionamento.
+A Temperança;Profissional;Significador;Pessoa em fase de ajuste no trabalho — moderação entre exigência e descanso.
+A Temperança;Acadêmico;Significador;Estudante buscando equilíbrio entre estudo e descanso, ajustando método aos poucos.
+A Temperança;Relacionamentos;Movimento;Processo gradual de ajuste e integração em curso na relação.
+A Temperança;Profissional;Movimento;Ajuste gradual de rotina/expectativas no trabalho em curso.
+A Temperança;Acadêmico;Movimento;Ajuste gradual de método de estudo em curso.
+A Temperança;Relacionamentos;Resultado;Equilíbrio alcançado com paciência — harmonia sustentável no tempo.
+A Temperança;Profissional;Resultado;Sucesso gradual, conquistado por ajuste, não por golpe único.
+A Temperança;Acadêmico;Resultado;Domínio construído aos poucos, de forma sustentável.
+O Diabo;Relacionamentos;Significador;Pessoa presa a um padrão pouco saudável — dependência emocional, ciúme, relação desequilibrada de poder.
+O Diabo;Profissional;Significador;Pessoa presa a uma situação de trabalho tóxica ou a um padrão próprio (procrastinação, medo de sair da zona de conforto).
+O Diabo;Acadêmico;Significador;Estudante preso a um padrão prejudicial (procrastinação, comparação excessiva, medo de errar).
+O Diabo;Relacionamentos;Movimento;Um padrão de apego/dependência está se intensificando na relação.
+O Diabo;Profissional;Movimento;Um padrão prejudicial está se intensificando no trabalho.
+O Diabo;Acadêmico;Movimento;Um padrão prejudicial está travando o progresso nos estudos.
+O Diabo;Relacionamentos;Resultado;Se nada mudar, o desfecho é permanecer presa ao padrão — a corrente não se rompe sozinha.
+O Diabo;Profissional;Resultado;Se nada mudar, o desfecho é permanecer presa ao padrão no trabalho — a corrente não se rompe sozinha.
+O Diabo;Acadêmico;Resultado;Se nada mudar, o desfecho é permanecer presa ao padrão nos estudos — a corrente não se rompe sozinha.
+A Torre;Relacionamentos;Significador;Relação sobre base frágil (segredo, desalinhamento, dependência) prestes a ser exposta.
+A Torre;Profissional;Significador;Situação de trabalho instável mesmo que pareça estável por fora.
+A Torre;Acadêmico;Significador;Método de estudo ou situação acadêmica insustentável que vai cobrar a conta.
+A Torre;Relacionamentos;Movimento;Ruptura ou confronto em curso e não dá para evitar.
+A Torre;Profissional;Movimento;Mudança abrupta em andamento: corte, demissão, reestruturação.
+A Torre;Acadêmico;Movimento;Crise em curso: reprovação se formando, choque de realidade sobre o método.
+A Torre;Relacionamentos;Resultado;Fim de um ciclo afetivo como está; o que resta depois tende a ser mais verdadeiro.
+A Torre;Profissional;Resultado;Desfecho de perda/corte que remove algo sem sustentação, abrindo espaço para reconstrução.
+A Torre;Acadêmico;Resultado;Resultado de reprovação ou necessidade de recomeçar o método.
+A Estrela;Relacionamentos;Significador;Pessoa em processo de cura emocional após fase difícil, reconectando com esperança.
+A Estrela;Profissional;Significador;Pessoa se recuperando de fase profissional difícil, reencontrando inspiração e propósito.
+A Estrela;Acadêmico;Significador;Estudante recuperando confiança após dificuldade, reconectando com o motivo original de estudar.
+A Estrela;Relacionamentos;Movimento;Processo de cura e renovação em curso, de melhora gradual.
+A Estrela;Profissional;Movimento;Processo de recuperação e renovação profissional em curso, de melhora gradual.
+A Estrela;Acadêmico;Movimento;Processo de recuperação e renovação nos estudos em curso, de melhora gradual.
+A Estrela;Relacionamentos;Resultado;Esperança realizada — recomeço genuíno e mais saudável, mesmo que não perfeito.
+A Estrela;Profissional;Resultado;Recomeço profissional mais saudável que o ponto de partida.
+A Estrela;Acadêmico;Resultado;Recomeço de formação mais consciente e saudável.
+O Sol;Relacionamentos;Significador;Pessoa em fase de leveza afetiva, autoestima alta, relação transparente.
+O Sol;Profissional;Significador;Pessoa em momento de reconhecimento, confiança e energia produtiva.
+O Sol;Acadêmico;Significador;Estudante em fase de confiança e clareza — entendimento "acendeu".
+O Sol;Relacionamentos;Movimento;Relação caminha para mais abertura e verdade.
+O Sol;Profissional;Movimento;As coisas se encaminham para reconhecimento profissional.
+O Sol;Acadêmico;Movimento;Entendimento se consolidando, destravando uma dificuldade.
+O Sol;Relacionamentos;Resultado;Desfecho feliz e verdadeiro — reconciliação sincera, confiança mútua.
+O Sol;Profissional;Resultado;Sucesso visível: aprovação, conquista, resultado reconhecido publicamente.
+O Sol;Acadêmico;Resultado;Aprovação, boa nota, domínio real da matéria.
+O Mundo;Relacionamentos;Significador;Fase de relacionamento completo e realizado, ou fechamento de ciclo afetivo importante.
+O Mundo;Profissional;Significador;Colheita dos frutos de um ciclo de trabalho bem conduzido.
+O Mundo;Acadêmico;Significador;Conclusão de uma etapa de formação com sucesso, sensação de missão cumprida.
+O Mundo;Relacionamentos;Movimento;Um ciclo afetivo está se completando, aproximando-se de um fechamento bem-sucedido.
+O Mundo;Profissional;Movimento;Um ciclo profissional está se completando com sucesso.
+O Mundo;Acadêmico;Movimento;Uma etapa de formação está se completando com sucesso.
+O Mundo;Relacionamentos;Resultado;Conclusão plena e satisfatória do ciclo afetivo.
+O Mundo;Profissional;Resultado;Objetivo profissional perseguido se realiza de forma completa e reconhecida.
+O Mundo;Acadêmico;Resultado;Formação/etapa concluída de forma completa e reconhecida.

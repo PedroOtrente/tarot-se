@@ -1,0 +1,54 @@
+<app-wizard-steps [atual]="3" />
+<section class="painel">
+  <p class="contexto">
+    Âmbito: <strong>{{ estado.ambito()?.nome }}</strong> · Tiragem: <strong>{{ estado.tipo()?.nome }}</strong>
+  </p>
+  <h2>Retire uma carta para cada posição</h2>
+  <p class="sutil">Sorteie aqui ou, se tirou a carta com o baralho físico, escolha-a na lista.</p>
+
+  <div class="mesa">
+    @for (p of posicoes(); track p.id) {
+      <div class="posicao">
+        <h3>{{ p.nome }}</h3>
+        <small class="sutil">{{ p.descricao }}</small>
+        <app-carta [nome]="cartaEm(p)?.nome ?? null" [numeral]="cartaEm(p)?.numeral ?? ''" [numero]="cartaEm(p)?.numeroArcano ?? null" />
+        <button class="btn" (click)="sortear(p)">🎲 Sortear</button>
+        <select [ngModel]="cartaEm(p)?.id ?? ''" (ngModelChange)="selecionar(p, $event)" [attr.aria-label]="'Carta para ' + p.nome">
+          <option value="" disabled>Escolher manualmente…</option>
+          @for (c of disponiveis(p); track c.id) {
+            <option [value]="c.id">{{ c.numeral }} — {{ c.nome }}</option>
+          }
+        </select>
+      </div>
+    }
+  </div>
+
+  @if (posicoes().length > 1) {
+    <div class="centro"><button class="btn" (click)="sortearTodas()">Sortear todas</button></div>
+  }
+
+  @for (f of estado.perguntas(); track f.codigo) {
+    <fieldset class="pergunta-fato">
+      <legend>Uma das cartas precisa de uma informação sua</legend>
+      <p>{{ f.pergunta }}</p>
+      <div class="sim-nao">
+        <label><input type="radio" [name]="f.codigo" [checked]="estado.fatos()[f.codigo] === true" (change)="estado.responder(f.codigo, true)"> Sim</label>
+        <label><input type="radio" [name]="f.codigo" [checked]="estado.fatos()[f.codigo] === false" (change)="estado.responder(f.codigo, false)"> Não</label>
+      </div>
+    </fieldset>
+  }
+
+  <label class="anotacao">
+    Deseja registrar uma anotação pessoal sobre esta leitura? <span class="sutil">(opcional — não influencia as regras)</span>
+    <textarea rows="2" maxlength="1000" [ngModel]="estado.anotacao()" (ngModelChange)="estado.anotacao.set($event)"></textarea>
+  </label>
+
+  @if (erro()) { <p class="erro">{{ erro() }}</p> }
+
+  <div class="acoes">
+    <a class="btn" routerLink="/tiragem">← Voltar</a>
+    <button class="btn primario" [disabled]="!estado.completa() || enviando()" (click)="interpretar()">
+      {{ enviando() ? 'Interpretando…' : 'Interpretar leitura →' }}
+    </button>
+  </div>
+</section>

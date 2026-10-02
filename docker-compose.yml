@@ -1,0 +1,52 @@
+# Sobe os 3 ambientes: banco (MySQL), API (ASP.NET Core) e site (Angular).
+#
+#   docker compose up -d --build        sobe tudo (a primeira vez demora alguns minutos)
+#   docker compose down                 desliga (os dados ficam guardados)
+#   docker compose down -v              desliga e APAGA o banco (use depois de mudar database/*.sql)
+#
+# Endereços no seu computador:
+#   Site     http://localhost:4201
+#   API      http://localhost:5080/swagger
+#   MySQL    localhost:3310  (usuário tarot / senha tarot123; root / root123)
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: tarot-se-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      TZ: America/Sao_Paulo
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_ai_ci
+    ports:
+      - "3310:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro
+      - tarot-se-dados:/var/lib/mysql
+    healthcheck:
+      # via TCP (127.0.0.1): só responde depois que os scripts de database/ terminaram
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot123"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  api:
+    build: ./backend
+    container_name: tarot-se-api
+    environment:
+      ConnectionStrings__TarotSE: "Server=mysql;Port=3306;Database=tarot_se;User=tarot;Password=tarot123;"
+      TZ: America/Sao_Paulo
+    ports:
+      - "5080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  web:
+    build: ./frontend
+    container_name: tarot-se-web
+    ports:
+      - "4201:80"
+    depends_on:
+      - api
+
+volumes:
+  tarot-se-dados:

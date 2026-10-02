@@ -1,0 +1,78 @@
+<app-wizard-steps [atual]="4" />
+@if (erro()) { <section class="painel"><p class="erro">{{ erro() }}</p></section> }
+@if (tiragem(); as t) {
+  <section class="painel">
+    <p class="contexto">
+      Leitura nº {{ t.tiragemId }} · {{ t.dataHora | date: 'dd/MM/yyyy HH:mm' }} ·
+      Âmbito: <strong>{{ t.ambito }}</strong> · Tiragem: <strong>{{ t.tipoTiragem }}</strong>
+    </p>
+
+    <div class="veredito" [class]="classe()">
+      <span class="rotulo-pequeno">Resultado final</span>
+      <strong class="categoria">{{ t.resultadoFinal.categoria }}</strong>
+      @if (t.resultadoFinal.complemento) { <span class="complemento">com {{ t.resultadoFinal.complemento }}</span> }
+      <span class="tag">definido pela regra {{ t.resultadoFinal.regraAplicada }}</span>
+    </div>
+
+    <div class="leitura">
+      @for (d of t.detalhes; track d.posicao) {
+        <article class="item-leitura">
+          <app-carta [nome]="d.carta" [numeral]="d.numeral" [numero]="d.numeroArcano" [pequena]="true" />
+          <div>
+            <h3>{{ d.posicao }} — {{ d.carta }}</h3>
+            <p>{{ d.significado }}</p>
+            <p class="meta">
+              <span class="tag">{{ d.regra }}</span>
+              @if (d.fallback) { <span class="sutil">ficha resumida (fallback)</span> }
+              @if (d.categoriaSugerida) { <span class="sutil">categoria sugerida: {{ d.categoriaSugerida }}</span> }
+            </p>
+          </div>
+        </article>
+      }
+    </div>
+
+    @if (t.combinacoes.length) {
+      <h3>Combinações identificadas</h3>
+      <ul class="combinacoes">
+        @for (c of t.combinacoes; track c.regra) {
+          <li [class.vencedora]="c.definiuResultado">
+            <span class="tag">{{ c.regra }}</span> {{ c.texto }}
+            @if (c.definiuResultado) { <span class="sutil">— definiu o resultado</span> }
+          </li>
+        }
+      </ul>
+    }
+
+    @if (t.fatos) {
+      <p class="sutil">Sua resposta usada pelas regras: {{ respostaFato(t) }}</p>
+    }
+
+    <h3>Interpretação consolidada</h3>
+    <p class="texto-final">{{ t.resultadoFinal.texto }}</p>
+
+    @if (t.anotacao) {
+      <h3>Sua anotação</h3>
+      <p class="sutil">{{ t.anotacao }}</p>
+    }
+
+    @if (t.rastro?.length) {
+      <details class="rastro">
+        <summary>Como o sistema chegou a esta conclusão</summary>
+        <p class="sutil">Todas as regras de combinação e consolidação são avaliadas. As verdadeiras formam o <strong>conjunto de conflito</strong>; vence a de maior prioridade (P1 é a mais alta).</p>
+        <ol>
+          @for (p of t.rastro; track p.regra) {
+            <li [class.disparou]="p.disparou" [class.descartada]="!p.disparou && p.observacao.startsWith('Também')">
+              <span class="tag">P{{ p.prioridade }} · {{ p.regra }}</span>
+              {{ p.disparou ? '✔' : p.observacao.startsWith('Também') ? '◐' : '✘' }} {{ p.observacao }}
+            </li>
+          }
+        </ol>
+      </details>
+    }
+
+    <div class="acoes">
+      <a class="btn" routerLink="/historico">Ver histórico</a>
+      <button class="btn primario" (click)="novaLeitura()">Nova leitura</button>
+    </div>
+  </section>
+}

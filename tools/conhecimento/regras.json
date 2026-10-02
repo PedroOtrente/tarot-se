@@ -1,0 +1,713 @@
+{
+  "_leia_me": [
+    "Regras de combinação e de consolidação (Camadas 4 e 5). Fonte: Seções 8.2, 8.3 e 9.3 do documento.",
+    "tipo COMPOSTA ou CONSOLIDACAO: participa da escolha da categoria final, pela prioridade (1 = mais alta).",
+    "tipo OBSERVACAO: só acrescenta o texto da combinação à leitura; não decide categoria.",
+    "categoria nula + herda_de: a categoria vem da carta indicada (nome de carta) ou da posição (Resultado).",
+    "Gramática da condição: todas[] (E), alguma[] (OU), {posicao?, carta_em} e {posicao?, categoria_em}, {sempre:true}.",
+    "Sem 'posicao', a condição vale para a carta em qualquer posição da tiragem."
+  ],
+  "fatos": [
+    {
+      "codigo": "HISTORICO_SOLIDO",
+      "pergunta": "Você considera que seu histórico/esforço nesta situação é sólido — que você fez a sua parte?",
+      "fonte": "R13 / ficha 9.3.7: A Justiça é Favorável se o histórico for sólido; caso contrário, Mudança Necessária."
+    }
+  ],
+  "regras": [
+    {
+      "codigo": "R23",
+      "tipo": "COMPOSTA",
+      "prioridade": 1,
+      "categoria": "MUDANCA",
+      "complemento": "tendência positiva após a mudança",
+      "texto": "Ruptura necessária seguida de desfecho favorável e claro.",
+      "fonte": "R23 (Seção 8.2) e Seção 9.5",
+      "condicao": {
+        "todas": [
+          {
+            "posicao": [
+              "Movimento"
+            ],
+            "carta_em": [
+              "A Torre"
+            ]
+          },
+          {
+            "posicao": [
+              "Resultado"
+            ],
+            "carta_em": [
+              "O Sol"
+            ]
+          }
+        ]
+      },
+      "justificativa": "É o exemplo central da Seção 9.5. A Torre no Movimento diz que a ruptura já está acontecendo; O Sol no Resultado diz que o desfecho é claro e positivo. As duas leituras são verdadeiras ao mesmo tempo, então a categoria não pode ser só Favorável (ignoraria a ruptura) nem só Mudança (ignoraria o desfecho). A regra registra as duas coisas: a mudança é necessária e o que vem depois dela é bom. Tem a prioridade mais alta porque é a combinação mais específica da base (duas cartas em posições fixas)."
+    },
+    {
+      "codigo": "R30",
+      "tipo": "COMPOSTA",
+      "prioridade": 2,
+      "categoria": "MUDANCA",
+      "complemento": "tendência positiva após a mudança",
+      "texto": "Ruptura ou transformação que desemboca em clareza, esperança e cura.",
+      "fonte": "Fichas 9.3.8 (Morte + Sol, Morte + Estrela), 9.3.11 (Torre + Estrela) e 9.3.12",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Torre",
+              "A Morte"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Sol",
+              "A Estrela"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Generaliza a R23 usando o que as fichas dizem sobre as mesmas cartas: a Morte + o Sol é uma transformação que desemboca em clareza; a Morte + a Estrela é esperança depois da transformação; a Torre + a Estrela é cura depois do colapso. Em todos os casos há uma ruptura e, junto, uma carta de desfecho positivo. Como não exige posição, cobre também tiragens em que as cartas aparecem em outra ordem. Fica logo abaixo da R23 porque é menos específica."
+    },
+    {
+      "codigo": "R24",
+      "tipo": "COMPOSTA",
+      "prioridade": 3,
+      "categoria": "MUDANCA",
+      "complemento": "de origem interna, com tendência de cura",
+      "texto": "Reconhecer o apego é o primeiro passo para a cura e a libertação real.",
+      "fonte": "R24 (Seção 8.2), fichas 9.3.10 e 9.3.12",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Estrela"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Vem da R24 do documento e das fichas do Diabo e da Estrela: reconhecer o apego é o primeiro passo para a cura. O documento não define a categoria. Escolhemos Mudança Necessária, porque o Diabo pede uma decisão de romper o padrão, com o complemento \"tendência de cura\", que é o que a Estrela acrescenta. A origem é interna (escolha da pessoa), como diz a ficha do Diabo."
+    },
+    {
+      "codigo": "R32",
+      "tipo": "COMPOSTA",
+      "prioridade": 4,
+      "categoria": "MUDANCA",
+      "complemento": "virada de ciclo como ruptura brusca",
+      "texto": "A virada de ciclo vem como ruptura brusca.",
+      "fonte": "Ficha 9.3.6 (Roda da Fortuna + Torre)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Roda da Fortuna"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha da Roda da Fortuna: com a Torre, a virada de ciclo vem como ruptura brusca. A Roda sozinha é Cautela (a pessoa não controla o resultado), mas com a Torre o rumo deixa de ser incerto: a mudança vai acontecer, e de forma abrupta."
+    },
+    {
+      "codigo": "R22",
+      "tipo": "COMPOSTA",
+      "prioridade": 5,
+      "categoria": "CAUTELA",
+      "complemento": "cautela redobrada antes de se lançar",
+      "texto": "Cautela redobrada: melhor avaliar onde \"vai cair\" antes de se lançar.",
+      "fonte": "R22 (Seção 8.2), fichas 9.3.1 e 9.3.11",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Louco"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Vem da R22 do documento e das fichas do Louco e da Torre: antes de se lançar, é preciso avaliar onde vai cair. O Louco pede um salto; a Torre mostra que a estrutura pode ruir. Juntos, o conselho é prudência. É um alerta, e por isso fica abaixo das regras de ruptura (R23, R30, R24, R32) e acima das regras favoráveis."
+    },
+    {
+      "codigo": "R25",
+      "tipo": "COMPOSTA",
+      "prioridade": 6,
+      "categoria": "CAUTELA",
+      "complemento": "reavaliar a decisão antes de agir",
+      "texto": "Alerta: a decisão pode estar sendo tomada por apego ou medo, não por valor genuíno — reavaliar antes de decidir.",
+      "fonte": "R25 (Seção 8.2), fichas 9.3.4 e 9.3.10",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "Os Enamorados"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Vem da R25 do documento e das fichas dos Enamorados e do Diabo: a decisão (Enamorados) pode estar sendo tomada por apego ou medo (Diabo), e não por um valor genuíno. O conselho é reavaliar antes de decidir, por isso a categoria é Cautela."
+    },
+    {
+      "codigo": "R34",
+      "tipo": "COMPOSTA",
+      "prioridade": 7,
+      "categoria": "CAUTELA",
+      "complemento": "cuidado com ilusões",
+      "texto": "Risco de se guiar por ilusão em vez de intuição real — cuidado com as aparências.",
+      "fonte": "Fichas 9.3.1 (Louco + Lua) e 9.3.3 (Sacerdotisa + Lua)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Lua"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Louco",
+              "A Sacerdotisa"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Das fichas do Louco (+ Lua: risco de se guiar por ilusão em vez de intuição real, reforça Cautela) e da Sacerdotisa (+ Lua: reforça a cautela com ilusões). A Lua é a carta da confusão; junto de cartas que dependem da intuição ou do salto no escuro, o risco de engano aumenta."
+    },
+    {
+      "codigo": "R35",
+      "tipo": "COMPOSTA",
+      "prioridade": 8,
+      "categoria": "CAUTELA",
+      "complemento": "o sucesso só vem depois de dissipar a dúvida",
+      "texto": "Tensão entre clareza e confusão: o sucesso só vem depois de dissipar a dúvida.",
+      "fonte": "Ficha 9.3.13 (Sol + Lua)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Sol"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Lua"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha do Sol: com a Lua, há tensão entre clareza e confusão, e o sucesso só vem depois de dissipar a dúvida. Mesmo com O Sol na tiragem, o conselho é esperar a dúvida se resolver, por isso fica acima das regras favoráveis."
+    },
+    {
+      "codigo": "R21",
+      "tipo": "COMPOSTA",
+      "prioridade": 9,
+      "categoria": "FAVORAVEL",
+      "complemento": "novo começo com desfecho positivo",
+      "texto": "Novo começo com desfecho positivo, reforçando o resultado Favorável.",
+      "fonte": "R21 (Seção 8.2), fichas 9.3.1 e 9.3.13",
+      "condicao": {
+        "todas": [
+          {
+            "posicao": [
+              "Movimento"
+            ],
+            "carta_em": [
+              "O Louco"
+            ]
+          },
+          {
+            "posicao": [
+              "Resultado"
+            ],
+            "carta_em": [
+              "O Sol"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Vem da R21 do documento e das fichas do Louco e do Sol: o salto do Louco, quando o desfecho é o Sol, é um novo começo leve e bem-sucedido. Fica abaixo das rupturas e dos alertas porque, se houver, por exemplo, uma Torre junto (CT13), a ruptura e o alerta pesam mais que o otimismo."
+    },
+    {
+      "codigo": "R33",
+      "tipo": "COMPOSTA",
+      "prioridade": 10,
+      "categoria": null,
+      "herda_de": "A Justiça",
+      "complemento": "resultado proporcional ao mérito",
+      "texto": "O resultado do ciclo será proporcional ao mérito, não pura sorte.",
+      "fonte": "Ficha 9.3.6 (Roda da Fortuna + Justiça)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Roda da Fortuna"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Justiça"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha da Roda da Fortuna: com a Justiça, o resultado do ciclo será proporcional ao mérito, não pura sorte. Por isso a categoria final é a mesma da Justiça, que depende da resposta do usuário sobre o próprio histórico."
+    },
+    {
+      "codigo": "R31",
+      "tipo": "COMPOSTA",
+      "prioridade": 11,
+      "categoria": "FAVORAVEL",
+      "complemento": "a virada de ciclo tende para o lado bom",
+      "texto": "Com uma carta de apoio favorável, a virada de ciclo tende para o lado bom.",
+      "fonte": "Ficha 9.3.6 (Roda + Sol) e Seção 8.3 (Roda sem carta de apoio favorável = Cautela)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Roda da Fortuna"
+            ]
+          },
+          {
+            "categoria_em": [
+              "FAVORAVEL"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da Seção 8.3 (a Roda é Cautela quando não há carta de apoio favorável) e da ficha da Roda (+ Sol: a virada tende para o lado bom). Se houver uma carta favorável na tiragem, ela indica para que lado a roda está girando."
+    },
+    {
+      "codigo": "R52",
+      "tipo": "CONSOLIDACAO",
+      "prioridade": 12,
+      "categoria": "MUDANCA",
+      "texto": "Uma carta de mudança na situação atual ou na tendência em curso pede ruptura ou mudança de rota.",
+      "fonte": "Seção 8.3 — Mudança Necessária: Torre, Morte ou Diabo em Significador ou Movimento",
+      "condicao": {
+        "posicao": [
+          "Significador",
+          "Movimento"
+        ],
+        "categoria_em": [
+          "MUDANCA"
+        ]
+      },
+      "justificativa": "Transforma em regra a linha \"Mudança Necessária\" da Seção 8.3: presença de Torre, Morte ou Diabo em Significador ou Movimento. Usamos a categoria das cartas em vez da lista de nomes, para que uma carta nova cadastrada como Mudança funcione sem mudar a regra. Uma ruptura no presente ou na tendência pesa mais que qualquer desfecho, por isso fica acima da R53."
+    },
+    {
+      "codigo": "R53",
+      "tipo": "CONSOLIDACAO",
+      "prioridade": 13,
+      "categoria": null,
+      "herda_de": "Resultado",
+      "texto": "A carta de Resultado (desfecho provável) define a categoria.",
+      "fonte": "Seção 8.1 — Resultado = desfecho provável (R06)",
+      "condicao": {
+        "posicao": [
+          "Resultado"
+        ],
+        "categoria_em": [
+          "FAVORAVEL",
+          "CAUTELA",
+          "MUDANCA"
+        ]
+      },
+      "justificativa": "A posição Resultado é, por definição (R06), o desfecho provável. Quando nenhuma combinação e nenhuma carta de mudança se aplica, quem decide é a carta de Resultado. Se ela for Neutra, a regra não dispara e as próximas são avaliadas."
+    },
+    {
+      "codigo": "R54",
+      "tipo": "CONSOLIDACAO",
+      "prioridade": 14,
+      "categoria": "FAVORAVEL",
+      "texto": "Há carta favorável na tiragem e nenhuma regra de maior prioridade se aplicou.",
+      "fonte": "Seção 8.3 — Favorável: Sol, Mundo, Estrela, Força, Temperança na tiragem",
+      "condicao": {
+        "categoria_em": [
+          "FAVORAVEL"
+        ]
+      },
+      "justificativa": "Da Seção 8.3: Favorável quando há cartas como Sol, Mundo, Estrela, Força ou Temperança na tiragem. Vale principalmente para tiragens de 1 e 2 cartas, que não têm posição Resultado."
+    },
+    {
+      "codigo": "R55",
+      "tipo": "CONSOLIDACAO",
+      "prioridade": 15,
+      "categoria": "CAUTELA",
+      "texto": "Há carta de cautela na tiragem sem carta de apoio favorável.",
+      "fonte": "Seção 8.3 — Cautela / Adiar",
+      "condicao": {
+        "categoria_em": [
+          "CAUTELA"
+        ]
+      },
+      "justificativa": "Da Seção 8.3: Cautela quando há carta de cautela (Roda, Lua, Enforcado) sem carta de apoio favorável. Como a R54 vem antes, quando existe carta favorável ela prevalece."
+    },
+    {
+      "codigo": "R56",
+      "tipo": "CONSOLIDACAO",
+      "prioridade": 16,
+      "categoria": "NEUTRO",
+      "texto": "As cartas não indicam claramente um desfecho.",
+      "fonte": "Seção 8.3 — Neutro / Mais Informação",
+      "condicao": {
+        "sempre": true
+      },
+      "justificativa": "Regra padrão. Garante que toda tiragem válida tenha exatamente um resultado: se nada apontar um lado, o resultado é Neutro / Mais Informação, como diz a Seção 8.3."
+    },
+    {
+      "codigo": "R36",
+      "tipo": "OBSERVACAO",
+      "texto": "Bagagem e ferramentas prontas — falta agir.",
+      "fonte": "Fichas 9.3.1 e 9.3.2 (Louco + Mago)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Louco"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Mago"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.1 e 9.3.2 (Louco + Mago). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R37",
+      "tipo": "OBSERVACAO",
+      "texto": "Equilíbrio entre ação e intuição/espera.",
+      "fonte": "Fichas 9.3.2 e 9.3.3 (Mago + Sacerdotisa)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Mago"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Sacerdotisa"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.2 e 9.3.3 (Mago + Sacerdotisa). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R38",
+      "tipo": "OBSERVACAO",
+      "texto": "Poder usado de forma manipuladora, não genuína.",
+      "fonte": "Ficha 9.3.2 (Mago + Diabo)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Mago"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.2 (Mago + Diabo). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R39",
+      "tipo": "OBSERVACAO",
+      "texto": "Forte convergência de introspecção e retiro para reflexão.",
+      "fonte": "Ficha 9.3.3 (Sacerdotisa + Eremita)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Sacerdotisa"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Eremita"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.3 (Sacerdotisa + Eremita). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R40",
+      "tipo": "OBSERVACAO",
+      "texto": "A decisão vem com ruptura, mas é necessária.",
+      "fonte": "Ficha 9.3.4 (Enamorados + Torre)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "Os Enamorados"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.4 (Enamorados + Torre). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R41",
+      "tipo": "OBSERVACAO",
+      "texto": "A decisão tende a um desfecho feliz e claro.",
+      "fonte": "Ficha 9.3.4 (Enamorados + Sol)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "Os Enamorados"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Sol"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.4 (Enamorados + Sol). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R42",
+      "tipo": "OBSERVACAO",
+      "texto": "Tensão entre domar o instinto (Força) e ser dominado por ele (Diabo) — ponto de decisão.",
+      "fonte": "Ficha 9.3.5 (Força + Diabo)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Força"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.5 (Força + Diabo). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R43",
+      "tipo": "OBSERVACAO",
+      "texto": "Força controlada + direção decidida = avanço forte.",
+      "fonte": "Ficha 9.3.5 (Força + Carro)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Força"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Carro"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.5 (Força + Carro). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R44",
+      "tipo": "OBSERVACAO",
+      "texto": "Necessidade de ver a situação de um novo ângulo antes de julgar.",
+      "fonte": "Ficha 9.3.7 (Justiça + Enforcado)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Justiça"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Enforcado"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.7 (Justiça + Enforcado). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R45",
+      "tipo": "OBSERVACAO",
+      "texto": "Reforça o encerramento de ciclo, quase sem meio-termo.",
+      "fonte": "Fichas 9.3.8 e 9.3.11 (Morte + Torre)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Morte"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.8 e 9.3.11 (Morte + Torre). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R46",
+      "tipo": "OBSERVACAO",
+      "texto": "Depois da ruptura abrupta, vem a necessidade de reconstrução equilibrada e paciente.",
+      "fonte": "Ficha 9.3.9 (Temperança + Torre)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Temperança"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.9 (Temperança + Torre). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R47",
+      "tipo": "OBSERVACAO",
+      "texto": "Tensão entre moderação e excesso/apego.",
+      "fonte": "Ficha 9.3.9 (Temperança + Diabo)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Temperança"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.9 (Temperança + Diabo). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R48",
+      "tipo": "OBSERVACAO",
+      "texto": "A estrutura de apego vai ruir de forma forçada, já que não foi rompida por escolha própria.",
+      "fonte": "Ficha 9.3.10 (Diabo + Torre)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Diabo"
+            ]
+          },
+          {
+            "carta_em": [
+              "A Torre"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.10 (Diabo + Torre). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R49",
+      "tipo": "OBSERVACAO",
+      "texto": "Combinação forte de Favorável: cura e sucesso reconhecido juntos.",
+      "fonte": "Ficha 9.3.12 (Estrela + Sol)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "A Estrela"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Sol"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.12 (Estrela + Sol). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R50",
+      "tipo": "OBSERVACAO",
+      "texto": "Fecha o ciclo simbólico completo da jornada do Tarô (início e fim).",
+      "fonte": "Ficha 9.3.14 (Mundo + Louco)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Mundo"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Louco"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.14 (Mundo + Louco). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    },
+    {
+      "codigo": "R51",
+      "tipo": "OBSERVACAO",
+      "texto": "Dobra a força do resultado Favorável.",
+      "fonte": "Ficha 9.3.14 (Mundo + Sol)",
+      "condicao": {
+        "todas": [
+          {
+            "carta_em": [
+              "O Mundo"
+            ]
+          },
+          {
+            "carta_em": [
+              "O Sol"
+            ]
+          }
+        ]
+      },
+      "justificativa": "Da ficha 9.3.14 (Mundo + Sol). Não muda a categoria, porque a ficha descreve o sentido da combinação mas não diz para que lado ela empurra o resultado; o texto entra na leitura como comentário."
+    }
+  ]
+}
